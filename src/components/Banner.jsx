@@ -1,6 +1,6 @@
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import React from "react";
-
+import stripe from "../../src/assets/RODE STREEP.png";
 const Banner = () => {
   const [text] = useTypewriter({
     words: [
@@ -17,12 +17,15 @@ const Banner = () => {
   return (
     <div className="w-full flex justify-between items-center ">
       <div className="w-full md:w-1/2 flex-1  flex-col justify-center items-center ">
-        <div className="border-l-8  border-red-800 md:pl-6 pl-2 text-start">
+        <div className=" md:pl-6 pl-2 text-start flex gap-6 items-center">
+          <div className="">
+            <img className=" w-3 md:w-5 h-40 md:h-60" src={stripe} alt="" />
+          </div>
           <div className="w-full p-4">
-            <h2 className="text-white text-xl lg:text-4xl font-semibold">
+            <h2 className="text-white text-2xl lg:text-4xl font-StraightlerOblique ">
               We vertellen je verhaal
             </h2>
-            <h2 className=" text-xl lg:text-4xl font-bold text-red-800 uppercase">
+            <h2 className=" text-xl lg:text-4xl font-StraightlerRegular2 text-red-800 uppercase">
               <span>{text}</span>
               <Cursor
                 cursorBlinking="true"
@@ -30,10 +33,10 @@ const Banner = () => {
                 cursorColor="#B71C1C"
               />
             </h2>
-            <p className="text-white text-xl lg:text-2xl">
+            <p className="text-white text-sm lg:text-2xl font-StraightlerRegular23">
               Heb je een project of een idee?
             </p>
-            <p className="text-white text-xl lg:text-2xl">
+            <p className="text-white text-sm lg:text-2xl font-StraightlerRegular23">
               <span className="text-red-800">E-mail</span> of{" "}
               <span className="text-red-800">bel</span> ons voor een afspraak.
             </p>
@@ -45,7 +48,9 @@ const Banner = () => {
           className="absolute text-white bottom-0 top-4 left-56
          w-full transform -rotate-90 md:text-3xl lg:text-5xl font-bold"
         >
-          <p className="text-center uppercase ">your vision, our creativity</p>
+          <p className="text-center uppercase font-StraightlerOblique ">
+            your vision, our creativity
+          </p>
         </div>
       </div>
     </div>
